@@ -9,11 +9,18 @@ import java.util.stream.Collectors;
 
 import static ic.doc.catalogues.QueryParser.*;
 
-public class BritishLibraryCatalogue {
+public class BritishLibraryCatalogue implements Seachable{
 
     // imagine that each new instance of this object uses more than 500MB of RAM
 
-    private final Collection<Book> catalogue = allTheBooks();
+    private Collection<Book> catalogue = allTheBooks();
+
+    private static BritishLibraryCatalogue instance;
+
+    public BritishLibraryCatalogue(){
+        //initialise catalogue
+        //set up data
+    }
 
     public List<Book> searchFor(String query) {
         return catalogue.stream()
@@ -25,8 +32,15 @@ public class BritishLibraryCatalogue {
                 .collect(Collectors.toList());
     }
 
+    public static synchronized BritishLibraryCatalogue getInstance(){
+        if(instance == null) {
+            instance = new BritishLibraryCatalogue();
+        }
+        return instance;
+    }
 
-    private Collection<Book> allTheBooks() {
+
+    protected Collection<Book> allTheBooks() {
 
         System.out.println("Memory Usage: 500MB...");
 

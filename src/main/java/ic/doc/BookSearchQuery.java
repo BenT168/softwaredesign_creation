@@ -12,6 +12,7 @@ public class BookSearchQuery {
     private final Integer date1;
     private final Integer date2;
 
+
     public BookSearchQuery(String p1, String p2, String p3, Integer p4, Integer p5) {
         this.name1 = p1;
         this.name2 = p2;
