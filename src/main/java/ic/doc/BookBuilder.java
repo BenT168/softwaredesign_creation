@@ -16,9 +16,8 @@ public class BookBuilder {
 
     public BookSearchQuery build(){
        
-        BookSearchQuery book = new BookSearchQuery(firstname, lastname, title, dateBefore, dateAfter);
-        book.execute();
-        return book;
+        return new BookSearchQuery(firstname, lastname, title, dateBefore, dateAfter);
+
     }
 
     public BookBuilder withMatchesAuthorFirstName(String firstname) {

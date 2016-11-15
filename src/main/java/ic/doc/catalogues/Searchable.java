@@ -4,7 +4,7 @@ import ic.doc.Book;
 
 import java.util.List;
 
-public interface Seachable {
+public interface Searchable {
 
     List<Book> searchFor(String author);
 }
