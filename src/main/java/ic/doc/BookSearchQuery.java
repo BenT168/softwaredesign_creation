@@ -22,9 +22,7 @@ public class BookSearchQuery {
     }
 
     public List<Book> execute(Catalogue catalogue) {
-
         StringBuffer query = new StringBuffer();
-
         if (name1 != null) {
             query.append("FIRSTNAME='").append(name1).append("' ");
         }
@@ -40,7 +38,6 @@ public class BookSearchQuery {
         if (date2 != null) {
             query.append("PUBLISHEDBEFORE(").append(date2).append(") ");
         }
-
         return catalogue.searchFor(query.toString());
     }
 }
