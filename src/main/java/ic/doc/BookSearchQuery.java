@@ -1,6 +1,6 @@
 package ic.doc;
 
-import ic.doc.catalogues.Searchable;
+import ic.doc.catalogues.Catalogue;
 
 import java.util.List;
 
@@ -21,8 +21,10 @@ public class BookSearchQuery {
         this.date2 = p5;
     }
 
-    public List<Book> execute(Searchable searchable) {
+    public List<Book> execute(Catalogue catalogue) {
+
         StringBuffer query = new StringBuffer();
+
         if (name1 != null) {
             query.append("FIRSTNAME='").append(name1).append("' ");
         }
@@ -38,6 +40,7 @@ public class BookSearchQuery {
         if (date2 != null) {
             query.append("PUBLISHEDBEFORE(").append(date2).append(") ");
         }
-        return searchable.searchFor(query.toString());
+
+        return catalogue.searchFor(query.toString());
     }
 }

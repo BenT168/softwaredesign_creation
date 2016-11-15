@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import static ic.doc.catalogues.QueryParser.*;
 
-public class BritishLibraryCatalogue implements Searchable {
+public class BritishLibraryCatalogue implements Catalogue {
 
     // imagine that each new instance of this object uses more than 500MB of RAM
 
@@ -40,7 +40,7 @@ public class BritishLibraryCatalogue implements Searchable {
     }
 
 
-    protected Collection<Book> allTheBooks() {
+    private Collection<Book> allTheBooks() {
 
         System.out.println("Memory Usage: 500MB...");
 
