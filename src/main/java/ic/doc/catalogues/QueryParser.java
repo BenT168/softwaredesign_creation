@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 class QueryParser {
 
     static Integer publishedAfterFrom(String query) {
-        Matcher matcher = Pattern.compile("PUBLISHEDAFTER\\((\\d+)\\)").matcher(query);
+        Matcher matcher = Pattern.compile("PUBLISHEDAFTER\\((\\d+)\\)").
+                matcher(query);
         if (matcher.find()) {
             return Integer.parseInt(matcher.group(1));
         }
@@ -14,7 +15,8 @@ class QueryParser {
     }
 
     static Integer publishedBeforeFrom(String query) {
-        Matcher matcher = Pattern.compile("PUBLISHEDBEFORE\\((\\d+)\\)").matcher(query);
+        Matcher matcher = Pattern.compile("PUBLISHEDBEFORE\\((\\d+)\\)").
+                matcher(query);
         if (matcher.find()) {
             return Integer.parseInt(matcher.group(1));
         }

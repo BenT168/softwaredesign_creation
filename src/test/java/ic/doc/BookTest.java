@@ -39,7 +39,8 @@ public class BookTest {
 
     @Test
     public void convertsToFormattedStringOfTitleAndAuthor() {
-        assertThat(oliverTwist.toString(), is("Oliver Twist, by Charles Dickens, published 1859"));
+        assertThat(oliverTwist.toString(),
+                is("Oliver Twist, by Charles Dickens, published 1859"));
     }
 
 }

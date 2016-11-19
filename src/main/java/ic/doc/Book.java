@@ -13,7 +13,8 @@ public class Book {
     }
 
     public boolean matchesAuthor(String author) {
-        return author == null || (this.author.toLowerCase().contains(author.toLowerCase()));
+        return author == null || (this.author.
+                toLowerCase().contains(author.toLowerCase()));
     }
 
     public boolean publishedBefore(Integer year) {
@@ -25,7 +26,8 @@ public class Book {
     }
 
     public boolean matchesTitle(String title) {
-        return title == null || (this.title.toLowerCase().contains(title.toLowerCase()));
+        return title == null || (this.title.
+                toLowerCase().contains(title.toLowerCase()));
     }
 
     @Override

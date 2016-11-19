@@ -54,9 +54,10 @@ public class BritishLibraryCatalogue implements Catalogue {
                 new Book("Brave New World", "Aldous Huxley", 1932),
                 new Book("Lord of the Flies", "William Golding", 1954),
                 new Book("Hamlet", "William Shakespeare", 1603),
-                new Book("The Life and Opinions of Tristram Shandy, Gentleman", "Laurence Sterne", 1759));
+                new Book("The Life and Opinions of Tristram Shandy, Gentleman",
+                        "Laurence Sterne", 1759));
 
-        // and so on... Imagine that this list is very large and therefore uses a lot of memory.
+        // and so on... Imagine this list's very large and therefore uses lots memory.
 
     }
 

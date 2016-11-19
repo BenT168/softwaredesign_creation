@@ -25,7 +25,8 @@ public class BookSearchQueryTest {
     @Test
     public void searchesForBooksInLibraryCatalogueByAuthorSurname() {
 
-        List<Book> books = query().withMatchesAuthorSurname("dickens").build().execute(catalogue);
+        List<Book> books = query().withMatchesAuthorSurname("dickens").
+                build().execute(catalogue);
 
         searchForBook(books);
         assertThat(books.size(), is(2));
